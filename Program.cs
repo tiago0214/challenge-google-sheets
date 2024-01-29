@@ -30,60 +30,60 @@ class Program
     }
     static void UpdateEntry()
     {
-        var startRow = 4; // A linha inicial da tabela
-        var rangeLeitura = $"{Sheet}!C{startRow}:F";
-        var request = service.Spreadsheets.Values.Get(SpreadSheetId, rangeLeitura);
+        var startRow = 4; // The starting row of the table
+        var rangeRead = $"{Sheet}!C{startRow}:F";
+        var request = service.Spreadsheets.Values.Get(SpreadSheetId, rangeRead);
 
         var response = request.Execute();
         var values = response.Values;
 
         if (values != null && values.Count > 0)
         {
-            // Itera sobre as linhas retornadas pela consulta
+            // Iterate over the rows returned by the query
             foreach (var row in values)
             {
-                var falta = Convert.ToInt32(row[0]); // Valor da coluna C
-                var notas = 0;
+                var missTheClass = Convert.ToInt32(row[0]); // Valor da coluna C
+                var grades = 0;
 
-                // Itera sobre as células D, E, F na linha atual
-                for (int i = 1; i < 4 && i < row.Count; i++) // Começa do índice 1, pois o índice 0 é a coluna C
+                // Iterate over cells D, E, F in the current row
+                for (int i = 1; i < 4 && i < row.Count; i++) // Start from index 1 since index 0 is column C
                 {
-                    notas += Convert.ToInt32(row[i]);
+                    grades += Convert.ToInt32(row[i]);
                 }
 
                 
-                var media = notas / 3;
+                var average = grades / 3;
 
                 
-                if (falta > 15)
+                if (missTheClass > 15)
                 {
                     WriteToColumnsGAndH(startRow, "Reprovado por falta", 0);
                 }
-                else if( media < 50)
+                else if(average < 50)
                 {
                     WriteToColumnsGAndH(startRow, "Reprovado por nota", 0);
                 }
-                else if (media > 70)
+                else if (average > 70)
                 {
                     WriteToColumnsGAndH(startRow, "Aprovado", 0);
                 }
-                else if (media >= 50 && media <= 70)
+                else if (average >= 50 && average <= 70)
                 {
-                    WriteToColumnsGAndH(startRow, "Exame final", (media + 70) / 2);
+                    WriteToColumnsGAndH(startRow, "Exame final", (average + 70) / 2);
                 }
                 else
                 {
-                    WriteToColumnsGAndH(startRow, notas, 0);
+                    WriteToColumnsGAndH(startRow, grades, 0);
                 }
                 startRow++;
             }
         }
     }
 
-    // method that write in G and H colunns
+    // Method to write to columns G and H
     static void WriteToColumnsGAndH(int row, object valueG, object valueH)
     {
-        // write on G
+        // Write to column G
         var valueRangeG = new ValueRange();
         var objectListG = new List<object> { valueG };
         valueRangeG.Values = new List<IList<object>> { objectListG };
@@ -93,7 +93,7 @@ class Program
         updateRequestG.ValueInputOption = SpreadsheetsResource.ValuesResource.UpdateRequest.ValueInputOptionEnum.USERENTERED;
         var appendResponseG = updateRequestG.Execute();
 
-        // write on H
+        // Write to column H
         var valueRangeH = new ValueRange();
         var objectListH = new List<object> { valueH };
         valueRangeH.Values = new List<IList<object>> { objectListH };
