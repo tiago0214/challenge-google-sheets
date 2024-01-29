@@ -32,9 +32,13 @@ class Program
             ApplicationName = AplicationName
         });
         UpdateEntry();
+        Console.Clear();
+        Console.WriteLine("Concluido!");
     }
     static void UpdateEntry()
     {
+        Console.Clear();
+        Console.WriteLine("Alterando planilha, por favor aguarde.");
         var startRow = 4; // The starting row of the table
         var rangeRead = $"{Sheet}!C{startRow}:F";
         var request = service.Spreadsheets.Values.Get(SpreadSheetId, rangeRead);

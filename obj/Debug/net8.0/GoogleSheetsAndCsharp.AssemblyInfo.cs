@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GoogleSheetsAndCsharp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ef4e7139e5eb8348479c670431c4feeee7dfbdb4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48bf75b17d226d52df16d5287a8f28caa21cba3d")]
 [assembly: System.Reflection.AssemblyProductAttribute("GoogleSheetsAndCsharp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GoogleSheetsAndCsharp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
