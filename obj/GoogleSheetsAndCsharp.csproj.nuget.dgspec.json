@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\GoogleSheetsAndCsharp\\GoogleSheetsAndCsharp.csproj": {}
+    "C:\\dev\\challenge-google-sheets\\GoogleSheetsAndCsharp.csproj": {}
   },
   "projects": {
-    "C:\\dev\\GoogleSheetsAndCsharp\\GoogleSheetsAndCsharp.csproj": {
+    "C:\\dev\\challenge-google-sheets\\GoogleSheetsAndCsharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\GoogleSheetsAndCsharp\\GoogleSheetsAndCsharp.csproj",
+        "projectUniqueName": "C:\\dev\\challenge-google-sheets\\GoogleSheetsAndCsharp.csproj",
         "projectName": "GoogleSheetsAndCsharp",
-        "projectPath": "C:\\dev\\GoogleSheetsAndCsharp\\GoogleSheetsAndCsharp.csproj",
+        "projectPath": "C:\\dev\\challenge-google-sheets\\GoogleSheetsAndCsharp.csproj",
         "packagesPath": "C:\\Users\\tiago\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\GoogleSheetsAndCsharp\\obj\\",
+        "outputPath": "C:\\dev\\challenge-google-sheets\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tiago\\AppData\\Roaming\\NuGet\\NuGet.Config",

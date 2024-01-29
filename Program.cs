@@ -3,6 +3,9 @@ using System.IO;
 using Google.Apis.Sheets.v4;
 using Google.Apis.Services;
 using Google.Apis.Sheets.v4.Data;
+using System.Reflection;
+using Newtonsoft.Json;
+
 
 class Program
 {
@@ -16,11 +19,13 @@ class Program
     static void Main(string[] args)
     {
         GoogleCredential credential;
-        using(var stream = new FileStream($@"C:\dev\GoogleSheetsAndCsharp\client_secrets.json",FileMode.Open, FileAccess.Read)) 
+
+        using (var stream = new FileStream(@"secret\client_secrets.json", FileMode.Open, FileAccess.Read))
         {
             credential = GoogleCredential.FromStream(stream)
                 .CreateScoped(Scopes);
         }
+
         service = new SheetsService(new Google.Apis.Services.BaseClientService.Initializer()
         {
             HttpClientInitializer = credential,
@@ -63,7 +68,7 @@ class Program
                 {
                     WriteToColumnsGAndH(startRow, "Reprovado por nota", 0);
                 }
-                else if (average > 70)
+                else if (average >= 70)
                 {
                     WriteToColumnsGAndH(startRow, "Aprovado", 0);
                 }

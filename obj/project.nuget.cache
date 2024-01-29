@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ODY4c8M6jrsqWfWBWFtVkfWMB4elvoycWAaI+0Q56khUAVl5DGaB7nUvll5XIlhOsbY86mNJZcLc6iUdIl+fMQ==",
+  "dgSpecHash": "tRqqNy0IQ1WfsySw7ZU8Yz1z2MC7y3k8luCWdGVBuB4nx9O+qamzVy6wtLwyvUiPbjsKu1P/puNkowGoy367Hg==",
   "success": true,
-  "projectFilePath": "C:\\dev\\GoogleSheetsAndCsharp\\GoogleSheetsAndCsharp.csproj",
+  "projectFilePath": "C:\\dev\\challenge-google-sheets\\GoogleSheetsAndCsharp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tiago\\.nuget\\packages\\google.apis\\1.66.0\\google.apis.1.66.0.nupkg.sha512",
     "C:\\Users\\tiago\\.nuget\\packages\\google.apis.auth\\1.66.0\\google.apis.auth.1.66.0.nupkg.sha512",
