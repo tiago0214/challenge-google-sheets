@@ -2,14 +2,14 @@
 ## Overview
 This C# console application interacts with Google Sheets API to read data from a specific range, perform calculations based on certain conditions, and update the spreadsheet accordingly.
 
-## Pre requisites
+## Prerequisites
 Before running the application, make sure you have the following:
 
 > - .NET Runtime installed on your machine.
 
 ## How to Run
 **Clone this repository to your local machine:**
-> - git clone https://github.com/your-username/your-repository.git
+> - git clone
 
 **Navigate to the project directory:**
 
